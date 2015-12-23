@@ -1,28 +1,34 @@
 #!/usr/bin/env python3
+
+# Project casit GUI model
+# ---------------------------------
+# This project implementes the main GUI model for casper development kit
+# All classes and functions, methods begin with prefix "UI"
+
 import sys
-#import
-#import kivy
-#from scripts import easyterm
+from utils import debug
 
-def CASsystemInit():
-    #term = easyterm.TerminalController()
-    #print term.render("${BLACK}${BG_WHITE}Initializing Casit environment${NORMAL}")
-    print("TerminalController Test Success...")
+# Runtime Unique states of casit based on storyboards
 
-def CASgenerateWidgetID():
-    return "RaNdOmId"
 
-class CASAbstractWidget():
+def UIsystemInit():
+    print("Initializing casit system - Why do I need this?")
+
+def __UIgenerateWidgetID():
+    # Efficient algorithm to generate non-colliding ids for different objects
+    return "ran-dom-id1"
+
+class UIAbstractWidget():
     def __init__(self):
-        self.id = CASgenerateWidgetID()
+        self.id = __UIgenerateWidgetID()
 
-class CASWidget(CASAbstractWidget):
+class UIWidget(UIAbstractWidget):
     def __init__(self, width, height):
         self.width = width
         self.height = height
         super.init()
 
-class CASWidgetGroup(CASAbstractWidget):
+class UIWidgetGroup(UIAbstractWidget):
     def __init__(self, layer=0):
         self.layer = layer
         self.id = CASgenerateWidgetID()
